@@ -1,9 +1,29 @@
 import Link from "next/link";
 import PdfTools from "./components/PdfTools";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: "Free PDF Tools",
+  url: "https://pdf-tool-three-beta.vercel.app",
+  applicationCategory: "UtilitiesApplication",
+  operatingSystem: "Any",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+  },
+  description:
+    "Free browser-based tools to merge PDFs, split PDF pages, and convert JPG/PNG images to PDF.",
+};
+
 export default function Home() {
   return (
     <main className="flex-1 flex flex-col items-center px-4 py-16 gap-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <header className="text-center max-w-2xl">
         <h1 className="text-3xl sm:text-4xl font-bold mb-3">Free PDF Tools</h1>
         <p className="text-white/60">
@@ -53,6 +73,9 @@ function FaqItem({ q, a }: { q: string; a: string }) {
 function Footer() {
   return (
     <footer className="text-xs text-white/40 flex gap-4">
+      <Link href="/how-to-merge-pdf-files" className="hover:text-white/70">
+        How to Merge PDFs
+      </Link>
       <Link href="/privacy" className="hover:text-white/70">
         Privacy Policy
       </Link>

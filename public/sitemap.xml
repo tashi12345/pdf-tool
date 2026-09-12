@@ -5,6 +5,10 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://pdf-tool-three-beta.vercel.app/how-to-merge-pdf-files</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://pdf-tool-three-beta.vercel.app/privacy</loc>
     <priority>0.3</priority>
   </url>
