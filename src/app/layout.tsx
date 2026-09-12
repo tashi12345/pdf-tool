@@ -2,10 +2,32 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
 
+const siteUrl = "https://pdf-tool-three-beta.vercel.app";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Free PDF Tools — Merge, Split & Convert Images to PDF",
   description:
-    "Merge PDFs, split PDF pages, and convert images to PDF — all free, all done in your browser. Files never leave your device.",
+    "Merge PDF online, split PDF pages, and convert JPG/PNG to PDF for free — done entirely in your browser. No sign-up, files never uploaded.",
+  keywords: [
+    "merge pdf online free",
+    "split pdf online",
+    "jpg to pdf",
+    "png to pdf",
+    "image to pdf converter",
+    "free pdf tools",
+  ],
+  alternates: {
+    canonical: siteUrl,
+  },
+  openGraph: {
+    title: "Free PDF Tools — Merge, Split & Convert Images to PDF",
+    description:
+      "Merge PDF online, split PDF pages, and convert JPG/PNG to PDF for free — done entirely in your browser.",
+    url: siteUrl,
+    siteName: "Free PDF Tools",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

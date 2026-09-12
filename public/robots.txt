@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pdf-tool-three-beta.vercel.app/sitemap.xml
