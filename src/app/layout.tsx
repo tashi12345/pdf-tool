@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import Beacon from "./components/Beacon";
 import "./globals.css";
 
 const siteUrl = "https://pdf-tool-three-beta.vercel.app";
@@ -51,6 +52,7 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased min-h-screen flex flex-col">
+        <Beacon />
         {children}
       </body>
     </html>
